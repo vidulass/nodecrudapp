@@ -1,0 +1,48 @@
+<%- include('include/_header')%>
+
+    <main id="site-main">
+        <div class="container">
+            
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-user" class="border-shadow">
+                    <span class="text-gradient">New User <i class="fas fa-user"></i></span>
+                </a>
+                <a href="/" class="border-shadow">
+                    <span class="text-gradient">Users <i class="fas fa-users"></i></span>
+                </a>
+                
+                
+            </div>
+            
+                
+            
+
+            
+                
+            
+
+            <!-- Search form -->
+            <form id="searchForm">
+                <label for="userName" ></label>
+                <input class ="search" type="text" id="userName" name="userName" required placeholder="Search by name">
+                <button class="btn-search" type="submit">Search</button>
+            </form>
+
+            <!--form handling-->
+            <table class="table">
+                <thead class="thead-dark">
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </thead>
+                <tbody id="userTableBody">
+                    <%- include('include/_show')%>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <%- include('include/_footer')%>
